@@ -1,0 +1,217 @@
+body {
+    position: relative;
+    max-width: 100%;
+    height: 100%;
+    margin: 0px;
+    background-color: #FFFFFF;
+    overflow-x: hidden;
+}
+
+html {
+    position: relative;
+    max-width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+footer {
+    position: sticky;
+    top: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 30px;
+    background-color: #000000;
+}
+
+footer p {
+    display: block;
+    font-size: 10px;
+    color: #dddddd;
+}
+
+/* ----- NAVIGATION BAR START ----- */
+#navbar {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    top: 0px;
+    left: 0px;
+    height: 30px;
+    padding: 10px;
+    margin: 0px;
+    background-color: #000000;
+    z-index: 5;
+}
+
+.nav_list {
+    padding-left: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.nav_list a {
+    padding: 20px;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: 'Bitter', serif;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+/* ----- NAVIGATION BAR END ----- */
+
+/* ----- MOBILE NAVIGATION BAR START ----- */
+#home-icon-container {
+    width: 50px;
+    justify-content: center;
+    display: flex;
+    padding-left: 60px;
+}
+
+#bar-icon-container {
+    width: 50px;
+    justify-content: center;
+    display: none;
+    padding-right: 15px;
+}
+
+#bar-icon {
+    animation-fill-mode: forwards;
+    animation-duration: 0.5s;
+    width: 30px;
+
+}
+
+#home-icon {
+    width: 30px;
+}
+
+@keyframes rotate-bar-icon {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(-90deg);
+    }
+}
+
+@keyframes rotate-back-bar-icon {
+    from {
+        transform: rotate(-90deg);
+    }
+
+    to {
+        transform: rotate(0deg);
+    }
+}
+
+#mobileNavList {
+    display: none;
+    position: fixed;
+    top: 50px;
+    left: 0px;
+    width: 100%;
+    z-index: 6;
+    flex-flow: column;
+    align-items: center;
+    background-color: #222222;
+    animation-duration: 0.8s;
+    animation-fill-mode: forwards;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+#mobileNavList::-webkit-scrollbar {
+    display: none;
+}
+
+/* spreads mobile nav list */
+@keyframes mobileNavListActive {
+    from {
+        height: 0px;
+    }
+
+    to {
+        height: 100%;
+    }
+}
+
+/* wraps mobile nav list */
+@keyframes mobileNavListInActive {
+    from {
+        height: 100%;
+    }
+
+    to {
+        height: 0px;
+    }
+}
+
+/* animate opacity of mobile nav list elements */
+@keyframes mNavListElementDisplay {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.mNavListElement {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 30px;
+    cursor: pointer;
+}
+
+.mNavListElement-animation {
+
+    opacity: 0;
+    animation-delay: 0.2s;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+.mNavListElement:hover {
+    background-color: #555555;
+}
+
+#mobileNavList a {
+    color: #FFFFFF;
+    font-size: 40px;
+    text-decoration: none;
+}
+
+.m-nav-line {
+    width: 100%;
+    margin: 0;
+    border: 2px solid #555555;
+
+}
+
+/* ----- MOBILE NAVIGATION BAR END -----  */
+
+@media only screen and (max-width:1000px) {
+    #navbar {
+        justify-content: space-between;
+        padding: 10px 0px;
+    }
+
+    #bar-icon-container {
+        display: flex;
+        padding-right: 25px;
+    }
+
+    #home-icon-container {
+        padding-left: 25px;
+    }
+
+    .nav_list {
+        display: none;
+    }
+}
