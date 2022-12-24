@@ -1,0 +1,35 @@
+{%extends "home/layout.html"%}
+{%load static%}
+{%block body%}
+<section id="blog-list-body">
+
+    {%for i in blog_list%}
+
+    <div class="blog-preview-container">
+
+        <img class="blog-thumbnail" src="static/media/blog_thumbnails/t1.png" alt="">
+
+        <div class="blog-preview-description-container">
+
+            <div class="blog-preview-title-container">
+                <h2 class="blog-preview-title"> How to Start Web Development</h2>
+            </div>
+
+            <div class="blog-preview-datetime-container">
+                <p class="blog-preview-datetime">Date: 13 Dec 2022 </p>
+            </div>
+
+            <div class="blog-preview-short-description-container">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga facilis dignissimos ea optio ipsam suscipit atque. Maiores illo reprehenderit error enim, laudantium eos quos necessitatibus vel labore corrupti incidunt ratione.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, consequuntur neque unde deserunt voluptate repudiandae, laboriosam fugit corporis, porro nam cum magnam. Eaque optio ex facilis inventore, impedit possimus unde sed at quod, qui tenetur pariatur dolorem, eius dicta nam iure. Cumque eligendi architecto aliquam repudiandae officiis possimus molestiae quos magni rem nemo amet at impedit asperiores cum rerum incidunt explicabo fuga, quaerat temporibus quas veniam eius molestias dolore? Quibusdam facere deserunt amet sunt reiciendis sequi praesentium deleniti expedita dolores hic, recusandae quod fugiat sint excepturi distinctio, nobis, debitis esse unde optio cupiditate beatae pariatur exercitationem? Earum totam et vero?
+                </p>
+            </div>
+
+        </div>
+    </div>
+
+    {%endfor%}
+
+</section>
+
+{%endblock%}

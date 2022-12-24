@@ -5,6 +5,13 @@ app_name="home"
 
 urlpatterns=[
     path('',views.index,name='index'),
-    path('photography',views.photography,name='photography')
+    path('layout',views.layout,name='layout'),
+    path('photography',views.photography,name='photography'),
+    path('blogs',views.blogs,name='blogs'),
+    path('signup',views.signup,name='signup'),
+    path('add',views.add,name='add'),
+
+
+
 
 ]

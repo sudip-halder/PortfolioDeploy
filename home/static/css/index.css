@@ -1,46 +1,124 @@
-#dpBackground {
+body {
     position: absolute;
-    border-radius: 50%;
-    width: 120%;
-    height: 840px;
-    /* ellipse width = 25% + 100% + 25% */
-    left: -10%;
-    top: -560px;
-    background: linear-gradient(180deg, rgba(251, 226, 6, 0) 0%, rgba(207, 255, 13, 0) 0.01%, rgba(255, 154, 2, 0) 63.8%, rgba(250, 255, 6, 0.49) 100%);
-    z-index: 0;
-}
-
-header {
-    position: relative;
-    top: 50px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    /* ellipse height (1030) - top(600) - navbar (70) */
-    height: 360px;
     margin: 0;
+    height: 200%;
     width: 100%;
+    background-image: url('/static/media/backgrounds/background7.png');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 0;
+
 }
 
-#dpContainer {
-    height: 66%;
+#index-body {
+
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    height: 50%;
     display: flex;
     align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    z-index: 5;
+
+    /* animation*/
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
 }
 
-#nameContainer {
-    height: 20%;
+@keyframes indexbody-hide {
+    0% {
+        opacity: 1;
+
+    }
+
+    100% {
+        opacity: 0;
+
+
+    }
+}
+
+@keyframes indexbody-show {
+    0% {
+        opacity: 0;
+
+    }
+
+    100% {
+        opacity: 1;
+
+
+    }
+}
+
+#frozen-box {
+    position: fixed;
+    height: 60%;
+    width: 0%;
     display: flex;
     align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.568);
+    border-radius: 15px;
+
+    /*animation*/
+    opacity: 0;
+    animation-name: frozenbox-expand;
+    animation-delay: 0.5s;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+
+}
+
+@keyframes frozenbox-expand {
+    0% {
+        display: flex;
+        width: 0%;
+        opacity: 0;
+
+    }
+
+    100% {
+
+        width: 70%;
+        opacity: 1;
+
+    }
 }
 
 #top_dp {
     border-radius: 50%;
+
     width: 170px;
     height: 170px;
     mix-blend-mode: normal;
-    box-shadow: 0px 0px 30px 20px #FFFFFF;
+    box-shadow: 0px 0px 30px 20px #ffffff31;
     z-index: 1;
+
+    /*animation*/
+    opacity: 0;
+    animation-name: opacity-change;
+    animation-delay: 0.8s;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+
+}
+
+@keyframes opacity-change {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
 #name {
@@ -48,54 +126,188 @@ header {
     top: 70px;
     font-size: 30px;
     font-family: 'PT Serif', serif;
+
+    /*animation*/
+    opacity: 0;
+    animation-name: opacity-change;
+    animation-delay: 1s;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
     z-index: 1;
 }
 
-.social_icon_container {
+#inside-body {
+    /*background-color: #FFFFFF;*/
+    background-image: url('/static/media/backgrounds/background6.jpg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    height: 0;
+    z-index: 10;
     display: flex;
+
+    /*animation*/
+    opacity: 0;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes inside-body-show {
+    0% {
+        height: 0;
+        opacity: 0;
+    }
+
+    1% {
+        height: 100%;
+    }
+
+    100% {
+        opacity: 1;
+        height: 100%;
+    }
+}
+
+@keyframes inside-body-hide {
+    0% {
+        height: 100%;
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+        height: 100%;
+    }
+
+    99% {
+        height: 100%;
+    }
+
+    100% {
+        height: 0%;
+    }
+}
+
+#box-icon {
+    position: fixed;
+    top: calc(50% - 20px );
+    left: 40px;
+    height: 40px;
+
+    animation-delay: 0ms;
+    animation-duration: 0.1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes box-icon-blink {
+    0% {
+        height: 40px;
+        
+    }
+
+    50% {
+        height: 50px;
+        
+    }
+
+    100% {
+        height: 40px;
+        
+    }
+}
+
+#sidebar {
+    position: fixed;
+    top: 15%;
+    left: 85px;
+   
+    width: 20%;
+    height: 80%;
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 15px;
+
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+
+    z-index: 20;
+}
+
+
+@keyframes sidebar-expand {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 20%;
+    }
+}
+
+@keyframes sidebar-shrink {
+    0% {
+        width: 20%;
+    }
+
+    100% {
+        width: 0%;
+    }
+}
+#navbar-container{
+    position: fixed;
+    top: 5px;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
     justify-content: center;
+    z-index: 20;
+}
+#navbar{
+    position: fixed;
+    top: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    
+    width: 80%;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 15px;
+
+    display: flex;
+    align-items: center;
+    
+    
 }
 
-.social_icons {
-    width: 40px;
-    margin: 10px;
-    border-radius: 10px;
-}
-
-#article_aboutme {
-    position: relative;
-    top: 50px;
+#navbar a{
     font-size: 20px;
-    margin: 10px 40px;
-    line-height: 30px;
-    text-align: justify;
+    padding: 10px 15px;
+    margin: 0 5px;
+    font-family: 'Bitter', serif;
+
 }
-
-#education_qualification {
-    display: block;
-    text-align: left;
+#home-icon{
+    width: 40px;
+    padding: 0 20px;
 }
-
-#education_qualification ul {
-    padding: 0 15px;
-}
-
-#education_qualification h3 {
-    margin-bottom: 0px;
-}
-
-
-@media only screen and (max-width:1000px) {
-    #dpBackground {
-        width: 150%;
-        height: 900px;
-        /* ellipse width = 25% + 100% + 25% */
-        left: -25%;
-        top: -625px;
-    }
-
-    .social_icons {
-        width: 40px;
-        border-radius: 8px;
-    }
+#body-content{
+    position: absolute;
+    top: 70px;
+    right: 10px;
+    left: 80px;
+    z-index: 15;
 }

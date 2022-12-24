@@ -1,19 +1,20 @@
 {%load static%}
 <!DOCTYPE html>
-
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en">
 
 <head>
 
-
     <!-- CSS FILES-->
+
     <link href="{%static 'css/layout.css'%}" rel="stylesheet" />
-    <link href="{%static 'css/index.css'%}" rel="stylesheet" />
     <link href="{%static 'css/Photography.css'%}" rel="stylesheet" />
+    <link href="{%static 'css/blogs.css'%}" rel="stylesheet" />
+
+
 
     <!-- JS FILES-->
-    <script src="{%static 'js/index.js'%}"></script>
-    
+    <script src="{%static 'js/layout.js'%}"></script>
+
 
     <!-- ##### EXTERNAL FILES ##### -->
 
@@ -25,50 +26,46 @@
     <!-- font-awsome kit for icons-->
     <script src="https://kit.fontawesome.com/d777da1c67.js" crossorigin="anonymous"></script>
 
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sudip Halder</title>
+    <title>Document</title>
 </head>
 
-<body id="layout_body">
-    <section title="navigation">
+<body id="inside-body">
+    <div id="navbar-container">
         <div id="navbar">
-            <div id="home-icon-container">
+
+
+            
+
                 <svg id="home-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
                     <path fill="#FFFFFF"
                         d="M575.8 255.5c0 18-15 32.1-32 32.1h-32l.7 160.2c0 2.7-.2 5.4-.5 8.1V472c0 22.1-17.9 40-40 40H456c-1.1 0-2.2 0-3.3-.1c-1.4 .1-2.8 .1-4.2 .1H416 392c-22.1 0-40-17.9-40-40V448 384c0-17.7-14.3-32-32-32H256c-17.7 0-32 14.3-32 32v64 24c0 22.1-17.9 40-40 40H160 128.1c-1.5 0-3-.1-4.5-.2c-1.2 .1-2.4 .2-3.6 .2H104c-22.1 0-40-17.9-40-40V360c0-.9 0-1.9 .1-2.8V287.6H32c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24z" />
                 </svg>
-            </div>
-            <div id="bar-icon-container">
-                <svg id="bar-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                    <path fill="#FFFFFF"
-                        d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z" />
-                </svg>
-            </div>
-
-            <div class="nav_list">
-                <a id="photography-link">Photography</a>
                 <a id="projects-link">Projects</a>
-            </div>
+                <a id="contact-link">Contact</a>
 
-        </div>
-        <div id="mobileNavList">
+                <a id="photography-link">Photography</a>
+                <a id="blogs-link">Blogs</a>
 
-            <div id="m-photography-link" class="mNavListElement , mNavListElement-animation "><a>Photography</a>
-            </div>
-            <div id="m-projects-link" class="mNavListElement , mNavListElement-animation "><a>Projects</a>
-            </div>
             
+            
+
         </div>
+    </div>
+    <svg id="box-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+        <path fill="#FFFFFF"
+            d="M192 80c0-26.5-21.5-48-48-48H48C21.5 32 0 53.5 0 80v96c0 26.5 21.5 48 48 48h96c26.5 0 48-21.5 48-48V80zm0 256c0-26.5-21.5-48-48-48H48c-26.5 0-48 21.5-48 48v96c0 26.5 21.5 48 48 48h96c26.5 0 48-21.5 48-48V336zM256 80v96c0 26.5 21.5 48 48 48h96c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48H304c-26.5 0-48 21.5-48 48zM448 336c0-26.5-21.5-48-48-48H304c-26.5 0-48 21.5-48 48v96c0 26.5 21.5 48 48 48h96c26.5 0 48-21.5 48-48V336z" />
+    </svg>
+    <div id="sidebar">
+
+    </div>
+    <section id="body-content">
+        {%block body%}
+
+        {%endblock%}
     </section>
-
-
-    {%block body%}
-
-    {%endblock%}
-
-    <footer id="footer">
-        <p>Designed by Sudip Halder</p>
-    </footer>
 </body>
 
 </html>

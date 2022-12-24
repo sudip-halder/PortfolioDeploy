@@ -27,7 +27,7 @@
 #photos-container {
     position: absolute;
 
-    top: 150px;
+    top: 0px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
