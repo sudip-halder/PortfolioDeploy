@@ -8,8 +8,9 @@ urlpatterns=[
     path('layout',views.layout,name='layout'),
     path('photography',views.photography,name='photography'),
     path('blogs',views.blogs,name='blogs'),
-    path('signup',views.signup,name='signup'),
-    path('add',views.add,name='add'),
+
+    path('contact',views.contact,name='contact_form'),
+    path('submit_contact_form',views.submit_contact_form,name='submit_contact_form'),
 
 
 

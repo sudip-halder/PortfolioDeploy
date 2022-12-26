@@ -4,9 +4,11 @@ body {
     height: 200%;
     width: 100%;
     background-image: url('/static/media/backgrounds/background7.png');
+
     background-attachment: fixed;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size:cover;
+
     z-index: 0;
 
 }
@@ -62,10 +64,10 @@ body {
     align-items: center;
     justify-content: center;
     flex-flow: column;
-    background: rgba(255, 255, 255, 0.25);
+    background: rgba(255, 255, 255, 0.3);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.568);
+    border: 1px solid rgba(255, 255, 255, 1);
     border-radius: 15px;
 
     /*animation*/
@@ -122,16 +124,18 @@ body {
 }
 
 #name {
-    margin: 10px;
-    top: 70px;
+   
+    
     font-size: 30px;
-    font-family: 'PT Serif', serif;
+    font-family: 'Michroma', sans-serif;
+    color: rgb(255, 255, 255);
+    text-shadow: 0 0 5px #000000;
 
     /*animation*/
     opacity: 0;
     animation-name: opacity-change;
-    animation-delay: 1s;
-    animation-duration: 1s;
+    animation-delay: 1.5s;
+    animation-duration: 2s;
     animation-fill-mode: forwards;
     z-index: 1;
 }
@@ -194,7 +198,7 @@ body {
 
 #box-icon {
     position: fixed;
-    top: calc(50% - 20px );
+    top: calc(50% - 20px);
     left: 40px;
     height: 40px;
 
@@ -206,17 +210,17 @@ body {
 @keyframes box-icon-blink {
     0% {
         height: 40px;
-        
+
     }
 
     50% {
         height: 50px;
-        
+
     }
 
     100% {
         height: 40px;
-        
+
     }
 }
 
@@ -224,7 +228,7 @@ body {
     position: fixed;
     top: 15%;
     left: 85px;
-   
+
     width: 20%;
     height: 80%;
     background: rgba(255, 255, 255, 0.6);
@@ -263,7 +267,8 @@ body {
         width: 0%;
     }
 }
-#navbar-container{
+
+#navbar-container {
     position: fixed;
     top: 5px;
     width: 100%;
@@ -273,12 +278,13 @@ body {
     justify-content: center;
     z-index: 20;
 }
-#navbar{
+
+#navbar {
     position: fixed;
     top: 5px;
     margin-left: auto;
     margin-right: auto;
-    
+
     width: 80%;
     height: 50px;
     background: rgba(255, 255, 255, 0.6);
@@ -289,22 +295,24 @@ body {
 
     display: flex;
     align-items: center;
-    
-    
+
+
 }
 
-#navbar a{
+#navbar a {
     font-size: 20px;
     padding: 10px 15px;
     margin: 0 5px;
     font-family: 'Bitter', serif;
 
 }
-#home-icon{
+
+#home-icon {
     width: 40px;
     padding: 0 20px;
 }
-#body-content{
+
+#body-content {
     position: absolute;
     top: 70px;
     right: 10px;

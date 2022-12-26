@@ -1,0 +1,58 @@
+{%extends "home/layout.html"%}
+{%load static%}
+{%block body%}
+
+
+<section id="contact-page-body">
+    <div id="contact-form-box">
+        <form id="contact-form" action="submit_contact_form" method="POST">
+            {% csrf_token %}
+
+            <input class="form-element" type="text" name="name" placeholder="Name" required>
+
+
+            <input class="form-element" type="email" name="email" placeholder="Email" required>
+
+
+            <textarea class="form-element" name="purpose" id="contact-form-purpose" cols="50" rows="10" maxlength="500"
+                placeholder="Description" required></textarea>
+
+            <div id="contact-form-button-box">
+                <div id="reset-container">
+                    <svg id="reset-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                        <path
+                            d="M125.7 160H176c17.7 0 32 14.3 32 32s-14.3 32-32 32H48c-17.7 0-32-14.3-32-32V64c0-17.7 14.3-32 32-32s32 14.3 32 32v51.2L97.6 97.6c87.5-87.5 229.3-87.5 316.8 0s87.5 229.3 0 316.8s-229.3 87.5-316.8 0c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0c62.5 62.5 163.8 62.5 226.3 0s62.5-163.8 0-226.3s-163.8-62.5-226.3 0L125.7 160z" />
+                    </svg>
+                </div>
+                <input id="contact-form-submit" type="submit">
+
+
+            </div>
+        </form>
+
+    </div>
+
+    <div id="other-contact-options">
+        <div id="email">
+            <h3 id="email-label">Email: </h3>
+            <h3 id="email-id" style="display: inline;">contact@sudiphalder.com</h3>
+        </div>
+        <div id="social_links">
+            <div id="linkedin" class="social_link_containers">
+                <img  class="social-icon" src="{{icon_dir}}/linkedin_icon.webp" alt="">
+                <a class="social-id">@sudiphalder</a>
+            </div>
+            <div id="twitter" class="social_link_containers">
+                <img class="social-icon" src="{{icon_dir}}/twitter_icon.png" alt="">
+                <a class="social-id">@sudip _ _ halder</a>
+            </div>
+            <div id="instagram" class="social_link_containers">
+                <img class="social-icon" src="{{icon_dir}}/instagram_icon.webp" alt="">
+                <a class="social-id">@sudip _ _ halder</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script src="{%static 'js/contact.js'%}"></script>
+{%endblock%}
