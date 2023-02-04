@@ -7,7 +7,7 @@ body {
 
     background-attachment: fixed;
     background-repeat: no-repeat;
-    background-size:cover;
+    background-size: cover;
 
     z-index: 0;
 
@@ -60,10 +60,12 @@ body {
     position: fixed;
     height: 60%;
     width: 0%;
+
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-flow: column;
+
+
     background: rgba(255, 255, 255, 0.3);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
@@ -95,6 +97,16 @@ body {
     }
 }
 
+#name_image {
+    width: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+}
+
+
 #top_dp {
     border-radius: 50%;
 
@@ -107,7 +119,7 @@ body {
     /*animation*/
     opacity: 0;
     animation-name: opacity-change;
-    animation-delay: 0.8s;
+    animation-delay: 1s;
     animation-duration: 1s;
     animation-fill-mode: forwards;
 
@@ -124,8 +136,6 @@ body {
 }
 
 #name {
-   
-    
     font-size: 30px;
     font-family: 'Michroma', sans-serif;
     color: rgb(255, 255, 255);
@@ -138,6 +148,77 @@ body {
     animation-duration: 2s;
     animation-fill-mode: forwards;
     z-index: 1;
+}
+
+#self_description_container {
+    align-self: flex-start;
+    width: 0%;
+
+    margin-top: 100px;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-flow: column;
+
+    /*animation*/
+    animation-name: self_description_container_reveal;
+    animation-delay: 2.5s;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+
+}
+@keyframes self_description_container_reveal{
+    0%{
+        width: 0%;
+        opacity: 0;
+    }
+    100%{
+        width: 50%;
+        opacity: 1;
+    }
+}
+
+.self_description {
+    color: rgb(255, 255, 255);
+    text-shadow: 0 0 2px #8f008f;
+
+    padding: 0px;
+    margin: 0px;
+    align-self: center;
+
+    
+}
+
+#sd1 {
+    font-size: 25px;
+    align-self: center;
+    
+}
+
+#sd2 {
+    margin-top: 5px;
+    font-size: 20px;
+    align-self: center;
+
+}
+
+#sd3 {
+    text-shadow: 0 0 2px #8f008f;
+    margin-top: 40px;
+    font-size: 15px;
+    font-family: 'Lekton', sans-serif;
+    font-weight: 1000;
+    
+}
+
+#sd4 {
+    text-shadow: 0 0 2px #8f008f;
+    margin-top: 5px;
+    font-size: 15px;
+    font-family: 'Lekton', sans-serif;
+    font-weight: 1000;
+
 }
 
 #inside-body {
@@ -237,7 +318,7 @@ body {
     border: 1px solid rgba(255, 255, 255, 0.5);
     border-radius: 15px;
 
-    display: flex;
+    display: none;
     align-items: center;
     flex-flow: column;
 

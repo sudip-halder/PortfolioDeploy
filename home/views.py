@@ -1,12 +1,12 @@
 from django.shortcuts import render
-import mysql.connector
+from .models import ContactForm
+
 
 # Create your views here.
 
 
 def index(request):
     return render(request, "home/index.html", {
-
     })
 
 
@@ -22,10 +22,12 @@ def photography(request):
     })
 
 
-def blogs(request):
 
+def blogs(request):
+    """
     mydb = mysql.connector.connect(
         host='127.0.0.1', user='root', passwd='sudiphalder', database="website")
+        """
     mycursor = mydb.cursor()
     fetch_blogs_data = f"SELECT * FROM blogs_data"
     mycursor.execute(fetch_blogs_data)
@@ -54,25 +56,30 @@ def blogs(request):
     })
 
 
+
 def contact(request):
     icon_dir = "static/media/icons"
     return render(request, "home/contact.html", {
         'icon_dir': icon_dir
     })
 
+
 def submit_contact_form(request):
+    """
     mydb = mysql.connector.connect(
         host='127.0.0.1', user='root', passwd='sudiphalder', database="website")
     mycursor = mydb.cursor()
-
+    """
     person_name = request.POST["name"]
     person_email = request.POST["email"]
     purpose = request.POST["purpose"]
 
-    if ((person_name != '') and (person_email != '') and (purpose != '')):
-        insert_data = f"INSERT INTO contact_form (person_name,person_email,purpose) VALUES('{person_name}','{person_email}','{purpose}')"
-        mycursor.execute(insert_data)
-        mydb.commit()
+    if (person_name != '') and (person_email != '') and (purpose != ''):
+        contact_form = ContactForm()
+        contact_form.person_name = person_name
+        contact_form.person_email = person_email
+        contact_form.purpose = purpose
+        contact_form.save()
         return render(request, "home/result.html", {
             'message': "Form submitted Successfully",
             'name': person_name,

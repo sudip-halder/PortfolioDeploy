@@ -15,7 +15,6 @@ document.addEventListener('DOMContentLoaded', function () {
         add_link("home-icon", "/");
         add_link("projects-link", "projects");
         add_link("contact-link", "contact");
-        add_link('photography-link', 'photography');
         add_link('blogs-link', 'blogs');
 
 
@@ -23,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function () {
         element.style.animationName = name;
     }
 
-    let checker = "active";
+    let checker = "inactive";
     box_icon.addEventListener("click", function () {
 
         setAnimationName(box_icon, "box-icon-blink");

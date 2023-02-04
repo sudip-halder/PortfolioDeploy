@@ -14,6 +14,7 @@
 
     <!-- JS FILES-->
     <script src="{%static 'js/index.js'%}"></script>
+    <script src="{%static 'js/layout.js'%}"></script>
 
 
     <!-- ##### EXTERNAL FILES ##### -->
@@ -27,6 +28,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Michroma&family=Orbitron&display=swap" rel="stylesheet">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lekton&display=swap" rel="stylesheet">
+
     <!-- font-awsome kit for icons-->
     <script src="https://kit.fontawesome.com/d777da1c67.js" crossorigin="anonymous"></script>
 
@@ -37,8 +42,17 @@
 <body>
     <div id="index-body">
         <div id="frozen-box">
-            <img id="top_dp" src="static/media/others/sudip_dp1.webp" />
-            <h1 id="name">Sudip Halder</h1>
+            <div id="name_image">
+                <img id="top_dp" src="static/media/others/sudip_dp1.webp" />
+                <h1 id="name">Sudip Halder</h1>
+            </div>
+            <div id="self_description_container">
+                <p class="self_description" id="sd1"></p>
+                <p class="self_description" id="sd2"></p>
+                <p class="self_description" id="sd3"></p>
+                <p class="self_description" id="sd4"></p>
+
+            </div>
         </div>
     </div>
     <div id="inside-body">
@@ -51,7 +65,6 @@
 
                 <a id="projects-link">Projects</a>
                 <a id="contact-link">Contact</a>
-     <!--       <a id="photography-link">Photography</a> -->
                 <a id="blogs-link">Blogs</a>
 
             </div>
