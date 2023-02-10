@@ -26,7 +26,7 @@ with open(os.path.join(BASE_DIR, 'secret_key.txt')) as f:
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True    
 
-ALLOWED_HOSTS = ['sudiphalder.com', 'www.sudiphalder.com', '127.0.0.1']
+ALLOWED_HOSTS = ['3.7.73.41']
 
 # Application definition
 
@@ -78,9 +78,9 @@ DATABASES = {
         "ENGINE": "django.db.backends.postgresql_psycopg2",
         "NAME": "website",
         "USER": "postgres",
-        "PASSWORD": "sudip",
-        "HOST": "localhost",
-        "PORT": "",
+        "PASSWORD": "mAhrK0QYNJfIkqKDGpSp",
+        "HOST": "portfolio.c0g1tk7dqvdm.ap-south-1.rds.amazonaws.com",
+        "PORT": "5432",
     }
 }
 
