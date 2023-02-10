@@ -1,0 +1,154 @@
+#contact-page-body {
+    position: absolute;
+    top: 0px;
+
+    width: 100%;
+    height: calc(100vh - 70px);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    overflow: hidden;
+}
+
+#contact-form-box {
+    width: 50%;
+    height: 60vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+
+    overflow: auto;
+}
+
+.form-element {
+    width: 100%;
+
+    display: block;
+    padding: 10px;
+    margin: 10px;
+
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 1);
+    border-radius: 10px;
+
+}
+
+.form-element:focus {
+    background: rgba(255, 255, 255, 1);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    outline: none;
+}
+
+#contact-form-purpose {
+    resize: none;
+}
+
+#contact-form-button-box {
+    width: 100%;
+
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#reset-container {
+    padding: 2px 40px;
+
+    background: rgb(255, 255, 255,0.7);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgb(190, 190, 190);
+    border-radius: 10px;
+
+}
+
+#reset-icon {
+    width: 25px;
+    padding: 0px;
+    margin: 0px;
+}
+
+#contact-form-submit {
+    width: 100px;
+    padding: 5px;
+    margin: 10px;
+    font-size: 20px;
+
+    background: rgb(255, 255, 255);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgb(190, 190, 190);
+    border-radius: 10px;
+
+}
+
+
+#other-contact-options {
+    width: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+
+}
+
+#email-label {
+    display: inline;
+    color: rgb(50, 50, 50);
+    margin: 10px;
+}
+
+#email-id {
+    display: inline;
+    color: rgb(50, 50, 50);
+    font-size: 20px;
+}
+
+#social_links {
+
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 50px 0;
+
+}
+
+.social_link_containers {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    background: rgb(255, 255, 255, 1);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+
+    border-radius: 20px;
+
+    margin: 5px;
+    padding: 0 10px;
+}
+
+.social-icon {
+    width: 30px;
+    border-radius: 8px;
+
+    margin: 10px;
+}
+
+.social-id {
+    font-size: 15px;
+    font-weight: 1000;
+    color: #252525;
+}

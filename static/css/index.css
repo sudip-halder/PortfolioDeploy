@@ -1,0 +1,408 @@
+body {
+    position: absolute;
+    margin: 0;
+    height: 200%;
+    width: 100%;
+    background-image: url('/static/media/backgrounds/background7.png');
+
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    z-index: 0;
+
+}
+
+#index-body {
+
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    z-index: 5;
+
+    /* animation*/
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes indexbody-hide {
+    0% {
+        opacity: 1;
+
+    }
+
+    100% {
+        opacity: 0;
+
+
+    }
+}
+
+@keyframes indexbody-show {
+    0% {
+        opacity: 0;
+
+    }
+
+    100% {
+        opacity: 1;
+
+
+    }
+}
+
+#frozen-box {
+    position: fixed;
+    height: 60%;
+    width: 0%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 1);
+    border-radius: 15px;
+
+    /*animation*/
+    opacity: 0;
+    animation-name: frozenbox-expand;
+    animation-delay: 0.5s;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+
+}
+
+@keyframes frozenbox-expand {
+    0% {
+        display: flex;
+        width: 0%;
+        opacity: 0;
+
+    }
+
+    100% {
+
+        width: 70%;
+        opacity: 1;
+
+    }
+}
+
+#name_image {
+    width: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+}
+
+
+#top_dp {
+    border-radius: 50%;
+
+    width: 170px;
+    height: 170px;
+    mix-blend-mode: normal;
+    box-shadow: 0px 0px 30px 20px #ffffff31;
+    z-index: 1;
+
+    /*animation*/
+    opacity: 0;
+    animation-name: opacity-change;
+    animation-delay: 1s;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+
+}
+
+@keyframes opacity-change {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+#name {
+    font-size: 30px;
+    font-family: 'Michroma', sans-serif;
+    color: rgb(255, 255, 255);
+    text-shadow: 0 0 5px #000000;
+
+    /*animation*/
+    opacity: 0;
+    animation-name: opacity-change;
+    animation-delay: 1.5s;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    z-index: 1;
+}
+
+#self_description_container {
+    align-self: flex-start;
+    width: 0%;
+    height: 50%;
+    margin-top: 100px;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-flow: column;
+
+    /*animation*/
+    animation-name: self_description_container_reveal;
+    animation-delay: 2.5s;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+
+}
+@keyframes self_description_container_reveal{
+    0%{
+        width: 0%;
+        opacity: 0;
+    }
+    100%{
+        width: 50%;
+        opacity: 1;
+    }
+}
+
+.self_description {
+    color: rgb(255, 255, 255);
+    text-shadow: 0 0 2px #8f008f;
+
+    padding: 0px;
+    margin: 0px;
+    align-self: center;
+
+    
+}
+
+#sd1 {
+    font-size: 25px;
+    align-self: center;
+    
+}
+
+#sd2 {
+    margin-top: 5px;
+    font-size: 20px;
+    align-self: center;
+
+}
+
+#sd3 {
+    text-shadow: 0 0 2px #8f008f;
+    margin-top: 40px;
+    font-size: 15px;
+    font-family: 'Lekton', sans-serif;
+    font-weight: 1000;
+    
+}
+
+#sd4 {
+    text-shadow: 0 0 2px #8f008f;
+    margin-top: 5px;
+    font-size: 15px;
+    font-family: 'Lekton', sans-serif;
+    font-weight: 1000;
+
+}
+
+#inside-body {
+    /*background-color: #FFFFFF;*/
+    background-image: url('/static/media/backgrounds/background6.jpg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    height: 0;
+    z-index: 10;
+    display: flex;
+
+    /*animation*/
+    opacity: 0;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes inside-body-show {
+    0% {
+        height: 0;
+        opacity: 0;
+    }
+
+    1% {
+        height: 100%;
+    }
+
+    100% {
+        opacity: 1;
+        height: 100%;
+    }
+}
+
+@keyframes inside-body-hide {
+    0% {
+        height: 100%;
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+        height: 100%;
+    }
+
+    99% {
+        height: 100%;
+    }
+
+    100% {
+        height: 0%;
+    }
+}
+
+#box-icon {
+    position: fixed;
+    top: calc(50% - 20px);
+    left: 40px;
+    height: 40px;
+
+    animation-delay: 0ms;
+    animation-duration: 0.1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes box-icon-blink {
+    0% {
+        height: 40px;
+
+    }
+
+    50% {
+        height: 50px;
+
+    }
+
+    100% {
+        height: 40px;
+
+    }
+}
+
+#sidebar {
+    position: fixed;
+    top: 15%;
+    left: 85px;
+
+    width: 20%;
+    height: 80%;
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 15px;
+
+    display: none;
+    align-items: center;
+    flex-flow: column;
+
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+
+    z-index: 20;
+}
+
+
+@keyframes sidebar-expand {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 20%;
+    }
+}
+
+@keyframes sidebar-shrink {
+    0% {
+        width: 20%;
+    }
+
+    100% {
+        width: 0%;
+    }
+}
+
+#navbar-container {
+    position: fixed;
+    top: 5px;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 20;
+}
+
+#navbar {
+    position: fixed;
+    top: 5px;
+    margin-left: auto;
+    margin-right: auto;
+
+    width: 80%;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 15px;
+
+    display: flex;
+    align-items: center;
+
+
+}
+
+#navbar a {
+    font-size: 20px;
+    padding: 10px 15px;
+    margin: 0 5px;
+    font-family: 'Bitter', serif;
+
+}
+
+#home-icon {
+    width: 40px;
+    padding: 0 20px;
+}
+
+#body-content {
+    position: fixed;
+    top: 0px;
+    right: 10px;
+    left: 80px;
+    z-index: 15;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 100vh;
+}
