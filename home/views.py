@@ -23,6 +23,12 @@ def photography(request):
     })
 
 
+def projects(request):
+    return render(request, "home/projects.html", {
+
+    })
+
+
 def blogs(request):
     blog_thumbnail_dir = "static/media/blog_thumbnails"
     blogs_object_list = BlogData.objects.all()

@@ -153,12 +153,12 @@ body {
 #self_description_container {
     align-self: flex-start;
     width: 0%;
-
+    height: 50%;
     margin-top: 100px;
 
     display: flex;
     align-items: flex-start;
-    justify-content: flex-start;
+    justify-content: center;
     flex-flow: column;
 
     /*animation*/
@@ -394,9 +394,15 @@ body {
 }
 
 #body-content {
-    position: absolute;
-    top: 70px;
+    position: fixed;
+    top: 0px;
     right: 10px;
     left: 80px;
     z-index: 15;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 100vh;
 }
